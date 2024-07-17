@@ -198,12 +198,12 @@ Insert into ROLE (ROLEID,ROLENAME) values (1,'Admin');
 Insert into ROLE (ROLEID,ROLENAME) values (2,'Teacher');
 Insert into ROLE (ROLEID,ROLENAME) values (3,'Parent');
 Insert into ROLE (ROLEID,ROLENAME) values (4,'Student');
-Insert into ROLE (ROLEID,ROLENAME) values (5,'Guest');
+Insert into ROLE (ROLEID,ROLENAME) values (5,'Driver');
 REM INSERTING into TESTIMONIAL
 SET DEFINE OFF;
 REM INSERTING into USER_
 SET DEFINE OFF;
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (1,'John','+1-234-567-890',1,'Doe','123 Main St, Springfield','johndoe','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (1,'John','+1-234-567-890',1,'Doe','stri123 Main St, Springfieldng','johndoe','Male');
 Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (2,'Jane','+1-234-567-891',2,'Smith','456 Elm St, Springfield','janesmith','Female');
 Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (3,'Emily','+1-234-567-892',3,'Johnson','789 Oak St, Springfield','emilyj','Female');
 Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (4,'Michael','+1-234-567-893',2,'Brown','101 Maple St, Springfield','michaelb','Male');
@@ -521,7 +521,7 @@ END Role_Package;
 
   CREATE OR REPLACE EDITIONABLE PACKAGE "SEARCH_CHILDREN_PACKAGE" AS
     PROCEDURE Search_Children_By_Name(
-        search_Name IN VARCHAR2
+        search_Name IN Children.firstname%type
     );
 END Search_Children_Package;
 
@@ -581,8 +581,7 @@ END TESTIMONIAL_package;
     u_username IN user_.username%TYPE,
     u_imagepath IN user_.imagepath%TYPE,
     u_gender IN user_.gender%TYPE,
-    u_phone IN user_.phone%TYPE,
-    u_roleid IN user_.roleid%TYPE
+    u_phone IN user_.phone%TYPE
   );
 
   PROCEDURE delete_user_(
@@ -1050,7 +1049,7 @@ select u.userid , u.roleid
 from login l
 inner join user_ u
 on l.userid = u.userid
-where lower(l.email)=lower(E_mail);
+where lower(l.email)=lower(E_mail)and l.password =Pass;
 dbms_sql.return_result(cur);
 end ;
 end Login_Package;
@@ -1174,7 +1173,7 @@ END Role_Package;
 
   CREATE OR REPLACE EDITIONABLE PACKAGE BODY "SEARCH_CHILDREN_PACKAGE" AS
     PROCEDURE Search_Children_By_Name(
-        search_Name IN VARCHAR2
+        search_Name IN Children.firstname%type
     ) AS
     result_cursor SYS_REFCURSOR;
     BEGIN
@@ -1275,8 +1274,7 @@ END TESTIMONIAL_package;
     u_username IN user_.username%TYPE,
     u_imagepath IN user_.imagepath%TYPE,
     u_gender IN user_.gender%TYPE,
-    u_phone IN user_.phone%TYPE,
-    u_roleid IN user_.roleid%TYPE
+    u_phone IN user_.phone%TYPE
   ) IS
   BEGIN
     UPDATE user_ SET
@@ -1286,8 +1284,7 @@ END TESTIMONIAL_package;
       username = u_username,
       imagepath = u_imagepath,
       gender = u_gender,
-      phone = u_phone,
-      roleid = u_roleid
+      phone = u_phone
     WHERE userID = u_userID;
     COMMIT;
   END update_user_;
