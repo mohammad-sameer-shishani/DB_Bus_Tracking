@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Wednesday-July-17-2024   
+--  File created - Friday-July-19-2024   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table ARRIVAL
@@ -507,11 +507,11 @@ END PageContent_Package;
 
   CREATE OR REPLACE EDITIONABLE PACKAGE "ROLE_PACKAGE" 
 as
-PROCEDURE Create_Role (role_Name in role.rolename%TYPE);
-PROCEDURE update_Role (RoleId in role.roleid%TYPE, role_Name in role.rolename%TYPE);
-PROCEDURE Delete_Role (RoleId in role.roleid%TYPE);
+PROCEDURE Create_Role (role_Name in ROLE.rolename%TYPE);
+PROCEDURE update_Role (Role_Id in ROLE.roleid%TYPE, role_Name in ROLE.rolename%TYPE);
+PROCEDURE Delete_Role (Role_Id in ROLE.roleid%TYPE);
 PROCEDURE GetAllRole;
-PROCEDURE GetRoleById(Role_Id in role.roleid%type);
+PROCEDURE GetRoleById(Role_Id in ROLE.roleid%type);
 END Role_Package;
 
 /
@@ -1119,29 +1119,29 @@ END PageContent_Package;
   CREATE OR REPLACE EDITIONABLE PACKAGE BODY "ROLE_PACKAGE" 
 AS
   ----------------------------Create Role-------------------------------------
-  PROCEDURE Create_Role(role_Name in role.rolename%TYPE)
+  PROCEDURE Create_Role(role_Name IN ROLE.rolename%TYPE)
   AS
   BEGIN
-    INSERT INTO Role (roleid, rolename) VALUES (DEFAULT, role_Name);
+    INSERT INTO ROLE (roleid, rolename) VALUES (DEFAULT,role_Name);
     COMMIT;
   END Create_Role;
 
   -----------------------------Update Role--------------------------------------
-  PROCEDURE Update_Role(RoleId IN role.roleid%TYPE, role_Name IN role.rolename%TYPE)
-  AS
+  PROCEDURE Update_Role(Role_Id IN ROLE.roleid%TYPE, role_Name IN ROLE.rolename%TYPE)
+  is
   BEGIN
-    UPDATE Role 
+    UPDATE ROLE 
     SET rolename = role_Name
-    WHERE roleid = RoleId;
+    WHERE role.roleid = Role_Id;
     COMMIT;
   END Update_Role;
 
   ------------------------Delete Role---------------------------------
-  PROCEDURE Delete_Role(RoleId IN role.roleid%TYPE)
+  PROCEDURE Delete_Role(Role_Id IN ROLE.roleid%TYPE)
   AS
   BEGIN
-    DELETE FROM Role 
-    WHERE roleid = RoleId;
+    DELETE FROM ROLE 
+    WHERE roleid = Role_Id;
     COMMIT;
   END Delete_Role;
 
@@ -1150,21 +1150,20 @@ AS
   AS
     roleCur SYS_REFCURSOR;
   BEGIN
-    OPEN roleCur FOR SELECT * FROM Role;
+    OPEN roleCur FOR SELECT * FROM ROLE;
     DBMS_SQL.RETURN_RESULT(roleCur);
   END GetAllRole;
 
-
- PROCEDURE GetRoleById(Role_Id in role.roleid%type)
-  is
+  ------------------Get Role By ID------------------------------------------
+  PROCEDURE GetRoleById(Role_Id IN ROLE.roleid%TYPE)
+  AS
     GetRole_Cur SYS_REFCURSOR;
   BEGIN
-    OPEN GetRole_Cur FOR SELECT * FROM Role where roleid = Role_Id;
+    OPEN GetRole_Cur FOR SELECT * FROM ROLE WHERE roleid = Role_Id;
     DBMS_SQL.RETURN_RESULT(GetRole_Cur);
   END GetRoleById;
 
-
-END Role_Package;
+END ROLE_PACKAGE;
 
 /
 --------------------------------------------------------
@@ -1309,7 +1308,10 @@ END TESTIMONIAL_package;
   PROCEDURE get_all_user_ IS
     c_g_all SYS_REFCURSOR;
   BEGIN
-    OPEN c_g_all FOR SELECT * FROM user_;
+    OPEN c_g_all FOR SELECT * 
+    FROM user_  u
+    inner join Role r 
+    on u.roleid=r.roleid;
     DBMS_SQL.RETURN_RESULT(c_g_all);
   END get_all_user_;
 
