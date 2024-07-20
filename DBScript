@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Friday-July-19-2024   
+--  File created - Saturday-July-20-2024   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table ARRIVAL
@@ -137,6 +137,7 @@
 	"IMAGEPATH" CLOB, 
 	"PHONE" VARCHAR2(15), 
 	"ROLEID" NUMBER, 
+	"CreatedDate" TIMESTAMP (6) WITH TIME ZONE DEFAULT SYSTIMESTAMP, 
 	"LASTNAME" VARCHAR2(100), 
 	"ADDRESS" VARCHAR2(255), 
 	"USERNAME" VARCHAR2(35), 
@@ -203,36 +204,36 @@ REM INSERTING into TESTIMONIAL
 SET DEFINE OFF;
 REM INSERTING into USER_
 SET DEFINE OFF;
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (1,'John','+1-234-567-890',1,'Doe','stri123 Main St, Springfieldng','johndoe','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (2,'Jane','+1-234-567-891',2,'Smith','456 Elm St, Springfield','janesmith','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (3,'Emily','+1-234-567-892',3,'Johnson','789 Oak St, Springfield','emilyj','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (4,'Michael','+1-234-567-893',2,'Brown','101 Maple St, Springfield','michaelb','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (5,'Sarah','+1-234-567-894',3,'Davis','202 Pine St, Springfield','sarahd','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (6,'David','+1-234-567-895',4,'Wilson','303 Cedar St, Springfield','davidw','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (7,'Laura','+1-234-567-896',2,'Martinez','404 Birch St, Springfield','lauram','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (8,'Kevin','+1-234-567-897',3,'Garcia','505 Walnut St, Springfield','keving','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (9,'Amy','+1-234-567-898',4,'Clark','606 Poplar St, Springfield','amyc','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (10,'Ryan','+1-234-567-899',5,'Lewis','707 Cherry St, Springfield','ryanl','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (21,'John','+1-234-567-890',1,'Doe','123 Main St, Springfield','johndoe2','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (22,'Jane','+1-234-567-891',2,'Smith','456 Elm St, Springfield','janesmith2','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (23,'Emily','+1-234-567-892',3,'Johnson','789 Oak St, Springfield','emilyj2','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (24,'Michael','+1-234-567-893',2,'Brown','101 Maple St, Springfield','michaelb2','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (25,'Sarah','+1-234-567-894',3,'Davis','202 Pine St, Springfield','sarahd2','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (26,'David','+1-234-567-895',4,'Wilson','303 Cedar St, Springfield','davidw2','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (27,'Laura','+1-234-567-896',2,'Martinez','404 Birch St, Springfield','lauram2','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (28,'Kevin','+1-234-567-897',3,'Garcia','505 Walnut St, Springfield','keving2','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (29,'Amy','+1-234-567-898',4,'Clark','606 Poplar St, Springfield','amyc2','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (30,'Ryan','+1-234-567-899',5,'Lewis','707 Cherry St, Springfield','ryanl2','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (31,'John','+1-234-567-890',1,'Doe','123 Main St, Springfield','johndoe3','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (32,'Jane','+1-234-567-891',2,'Smith','456 Elm St, Springfield','janesmith3','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (33,'Emily','+1-234-567-892',3,'Johnson','789 Oak St, Springfield','emilyj3','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (34,'Michael','+1-234-567-893',2,'Brown','101 Maple St, Springfield','michaelb3','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (35,'Sarah','+1-234-567-894',3,'Davis','202 Pine St, Springfield','sarahd3','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (36,'David','+1-234-567-895',4,'Wilson','303 Cedar St, Springfield','davidw3','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (37,'Laura','+1-234-567-896',2,'Martinez','404 Birch St, Springfield','lauram3','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (38,'Kevin','+1-234-567-897',3,'Garcia','505 Walnut St, Springfield','keving3','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (39,'Amy','+1-234-567-898',4,'Clark','606 Poplar St, Springfield','amyc3','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,LASTNAME,ADDRESS,USERNAME,GENDER) values (40,'Ryan','+1-234-567-899',5,'Lewis','707 Cherry St, Springfield','ryanl3','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (1,'John','+1-234-567-890',1,to_timestamp_tz('19-JUL-24 06.55.32.491000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Doe','stri123 Main St, Springfieldng','johndoe','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2,'Jane','+1-234-567-891',2,to_timestamp_tz('19-JUL-24 06.55.32.496000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Smith','456 Elm St, Springfield','janesmith','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (3,'Emily','+1-234-567-892',3,to_timestamp_tz('19-JUL-24 06.55.32.502000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Johnson','789 Oak St, Springfield','emilyj','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (4,'Michael','+1-234-567-893',2,to_timestamp_tz('19-JUL-24 06.55.32.506000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Brown','101 Maple St, Springfield','michaelb','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (5,'Sarah','+1-234-567-894',3,to_timestamp_tz('19-JUL-24 06.55.32.514000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Davis','202 Pine St, Springfield','sarahd','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (6,'David','+1-234-567-895',4,to_timestamp_tz('19-JUL-24 06.55.32.520000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Wilson','303 Cedar St, Springfield','davidw','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (7,'Laura','+1-234-567-896',2,to_timestamp_tz('19-JUL-24 06.55.32.525000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Martinez','404 Birch St, Springfield','lauram','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (8,'Kevin','+1-234-567-897',3,to_timestamp_tz('19-JUL-24 06.55.32.530000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Garcia','505 Walnut St, Springfield','keving','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (9,'Amy','+1-234-567-898',4,to_timestamp_tz('19-JUL-24 06.55.32.536000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Clark','606 Poplar St, Springfield','amyc','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (10,'Ryan','+1-234-567-899',5,to_timestamp_tz('19-JUL-24 06.55.32.540000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Lewis','707 Cherry St, Springfield','ryanl','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (21,'John','+1-234-567-890',1,to_timestamp_tz('19-JUL-24 06.55.32.544000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Doe','123 Main St, Springfield','johndoe2','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (22,'Jane','+1-234-567-891',2,to_timestamp_tz('19-JUL-24 06.55.32.548000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Smith','456 Elm St, Springfield','janesmith2','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (23,'Emily','+1-234-567-892',3,to_timestamp_tz('19-JUL-24 06.55.32.554000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Johnson','789 Oak St, Springfield','emilyj2','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (24,'Michael','+1-234-567-893',2,to_timestamp_tz('19-JUL-24 06.55.32.559000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Brown','101 Maple St, Springfield','michaelb2','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (25,'Sarah','+1-234-567-894',3,to_timestamp_tz('19-JUL-24 06.55.32.562000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Davis','202 Pine St, Springfield','sarahd2','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (26,'David','+1-234-567-895',4,to_timestamp_tz('19-JUL-24 06.55.32.568000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Wilson','303 Cedar St, Springfield','davidw2','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (27,'Laura','+1-234-567-896',2,to_timestamp_tz('19-JUL-24 06.55.32.575000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Martinez','404 Birch St, Springfield','lauram2','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (28,'Kevin','+1-234-567-897',3,to_timestamp_tz('19-JUL-24 06.55.32.580000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Garcia','505 Walnut St, Springfield','keving2','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (29,'Amy','+1-234-567-898',4,to_timestamp_tz('19-JUL-24 06.55.32.583000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Clark','606 Poplar St, Springfield','amyc2','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (30,'Ryan','+1-234-567-899',5,to_timestamp_tz('19-JUL-24 06.55.32.587000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Lewis','707 Cherry St, Springfield','ryanl2','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (31,'John','+1-234-567-890',1,to_timestamp_tz('19-JUL-24 06.55.32.592000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Doe','123 Main St, Springfield','johndoe3','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (32,'Jane','+1-234-567-891',2,to_timestamp_tz('19-JUL-24 06.55.32.596000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Smith','456 Elm St, Springfield','janesmith3','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (33,'Emily','+1-234-567-892',3,to_timestamp_tz('19-JUL-24 06.55.32.600000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Johnson','789 Oak St, Springfield','emilyj3','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (34,'Michael','+1-234-567-893',2,to_timestamp_tz('19-JUL-24 06.55.32.605000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Brown','101 Maple St, Springfield','michaelb3','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (35,'Sarah','+1-234-567-894',3,to_timestamp_tz('19-JUL-24 06.55.32.610000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Davis','202 Pine St, Springfield','sarahd3','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (36,'David','+1-234-567-895',4,to_timestamp_tz('19-JUL-24 06.55.32.613000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Wilson','303 Cedar St, Springfield','davidw3','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (37,'Laura','+1-234-567-896',2,to_timestamp_tz('19-JUL-24 06.55.32.618000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Martinez','404 Birch St, Springfield','lauram3','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (38,'Kevin','+1-234-567-897',3,to_timestamp_tz('19-JUL-24 06.55.32.621000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Garcia','505 Walnut St, Springfield','keving3','Male');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (39,'Amy','+1-234-567-898',4,to_timestamp_tz('19-JUL-24 06.55.32.627000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Clark','606 Poplar St, Springfield','amyc3','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (40,'Ryan','+1-234-567-899',5,to_timestamp_tz('19-JUL-24 06.55.32.632000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Lewis','707 Cherry St, Springfield','ryanl3','Male');
 --------------------------------------------------------
 --  DDL for Index USER__UK1
 --------------------------------------------------------
@@ -390,6 +391,7 @@ END BusLocation_Package;
   PROCEDURE Get_All_BusRoutes;
 END BusRoute_Package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package CHILDREN_PACKAGE
@@ -460,6 +462,7 @@ END Children_package;
 
 END CONTACTUS_package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package LOGIN_PACKAGE
@@ -499,6 +502,7 @@ end Login_Package;
 
   PROCEDURE Get_All_PageContent;
 END PageContent_Package;
+
 
 /
 --------------------------------------------------------
@@ -556,6 +560,7 @@ END Search_Children_Package;
 
 END TESTIMONIAL_package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package USER__PACKAGE
@@ -563,15 +568,18 @@ END TESTIMONIAL_package;
 
   CREATE OR REPLACE EDITIONABLE PACKAGE "USER__PACKAGE" IS
   PROCEDURE create_user_(
-    c_firstname IN user_.firstname%TYPE,
-    c_lastname IN user_.lastname%TYPE,
-    c_address IN user_.address%TYPE,
-    c_username IN user_.username%TYPE,
-    c_imagepath IN user_.imagepath%TYPE,
-    c_gender IN user_.gender%TYPE,
-    c_phone IN user_.phone%TYPE,
-    c_roleid IN user_.roleid%TYPE
-  );
+        Firstname IN USER_.FIRSTNAME%TYPE,
+        Lastname IN USER_.LASTNAME%TYPE,
+        Username IN USER_.USERNAME%TYPE,
+        Password IN LOGIN.PASSWORD%TYPE,
+        Email IN LOGIN.EMAIL%TYPE,
+        Phone IN USER_.PHONE%TYPE,
+        Address IN USER_.ADDRESS%TYPE,
+        Roleid IN USER_.ROLEID%TYPE,
+        Gender IN USER_.GENDER%TYPE,
+        Imagepath IN USER_.IMAGEPATH%TYPE,
+        UserId OUT USER_.USERID%TYPE
+    ) ;
 
   PROCEDURE update_user_(
     u_userID IN user_.userID%TYPE,
@@ -1033,6 +1041,7 @@ END Children_package;
 
 END CONTACTUS_package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package Body LOGIN_PACKAGE
@@ -1250,19 +1259,27 @@ END TESTIMONIAL_package;
 
   CREATE OR REPLACE EDITIONABLE PACKAGE BODY "USER__PACKAGE" IS
   PROCEDURE create_user_(
-    c_firstname IN user_.firstname%TYPE,
-    c_lastname IN user_.lastname%TYPE,
-    c_address IN user_.address%TYPE,
-    c_username IN user_.username%TYPE,
-    c_imagepath IN user_.imagepath%TYPE,
-    c_gender IN user_.gender%TYPE,
-    c_phone IN user_.phone%TYPE,
-    c_roleid IN user_.roleid%TYPE
-  ) IS
-  BEGIN
-    INSERT INTO user_ (firstname, lastname, address, username, imagepath, gender, phone, roleid)
-    VALUES (c_firstname, c_lastname, c_address, c_username, c_imagepath, c_gender, c_phone, c_roleid);
-    COMMIT;
+        Firstname IN USER_.FIRSTNAME%TYPE,
+        Lastname IN USER_.LASTNAME%TYPE,
+        Username IN USER_.USERNAME%TYPE,
+        Password IN LOGIN.PASSWORD%TYPE,
+        Email IN LOGIN.EMAIL%TYPE,
+        Phone IN USER_.PHONE%TYPE,
+        Address IN USER_.ADDRESS%TYPE,
+        Roleid IN USER_.ROLEID%TYPE,
+        Gender IN USER_.GENDER%TYPE,
+        Imagepath IN USER_.IMAGEPATH%TYPE,
+        UserId OUT USER_.USERID%TYPE
+    ) AS
+    BEGIN
+        -- Insert into USER_ table
+        INSERT INTO USER_ (USERID,FIRSTNAME, LASTNAME, USERNAME, PHONE, ADDRESS, ROLEID, GENDER, IMAGEPATH)
+        VALUES (DEFAULT,Firstname, Lastname, Username, Phone, Address, Roleid, Gender, Imagepath)
+        RETURNING USERID INTO UserId;
+
+        -- Insert into LOGIN table
+        INSERT INTO LOGIN (EMAIL, PASSWORD, USERID)
+        VALUES (Email, Password, UserId);
   END create_user_;
 
   PROCEDURE update_user_(
@@ -1322,10 +1339,10 @@ END user__package;
 --  Constraints for Table ATTENDANCE
 --------------------------------------------------------
 
-  ALTER TABLE "ATTENDANCE" MODIFY ("ATTENDANCEID" NOT NULL ENABLE);
   ALTER TABLE "ATTENDANCE" ADD PRIMARY KEY ("ATTENDANCEID")
   USING INDEX  ENABLE;
   ALTER TABLE "ATTENDANCE" MODIFY ("STATUS" NOT NULL ENABLE);
+  ALTER TABLE "ATTENDANCE" MODIFY ("ATTENDANCEID" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table USER_
 --------------------------------------------------------
@@ -1337,13 +1354,13 @@ END user__package;
   ALTER TABLE "USER_" MODIFY ("LASTNAME" NOT NULL ENABLE);
   ALTER TABLE "USER_" MODIFY ("USERNAME" NOT NULL ENABLE);
   ALTER TABLE "USER_" ADD CONSTRAINT "USER__UK1" UNIQUE ("USERNAME")
-  USING INDEX  ENABLE;
+  USING INDEX "USER__UK1"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table ARRIVAL
 --------------------------------------------------------
 
-  ALTER TABLE "ARRIVAL" MODIFY ("STATUS" NOT NULL ENABLE);
   ALTER TABLE "ARRIVAL" MODIFY ("ARRIVALID" NOT NULL ENABLE);
+  ALTER TABLE "ARRIVAL" MODIFY ("STATUS" NOT NULL ENABLE);
   ALTER TABLE "ARRIVAL" ADD PRIMARY KEY ("ARRIVALID")
   USING INDEX  ENABLE;
 --------------------------------------------------------
@@ -1404,8 +1421,8 @@ END user__package;
 --  Constraints for Table CHILDREN
 --------------------------------------------------------
 
-  ALTER TABLE "CHILDREN" MODIFY ("LASTNAME" NOT NULL ENABLE);
   ALTER TABLE "CHILDREN" MODIFY ("CHILDID" NOT NULL ENABLE);
+  ALTER TABLE "CHILDREN" MODIFY ("LASTNAME" NOT NULL ENABLE);
   ALTER TABLE "CHILDREN" MODIFY ("FIRSTNAME" NOT NULL ENABLE);
   ALTER TABLE "CHILDREN" ADD PRIMARY KEY ("CHILDID")
   USING INDEX  ENABLE;
@@ -1413,8 +1430,8 @@ END user__package;
 --  Constraints for Table TESTIMONIAL
 --------------------------------------------------------
 
-  ALTER TABLE "TESTIMONIAL" MODIFY ("STATUS" NOT NULL ENABLE);
   ALTER TABLE "TESTIMONIAL" MODIFY ("TESTIMONIALID" NOT NULL ENABLE);
+  ALTER TABLE "TESTIMONIAL" MODIFY ("STATUS" NOT NULL ENABLE);
   ALTER TABLE "TESTIMONIAL" MODIFY ("MESSAGE" NOT NULL ENABLE);
   ALTER TABLE "TESTIMONIAL" ADD PRIMARY KEY ("TESTIMONIALID")
   USING INDEX  ENABLE;
