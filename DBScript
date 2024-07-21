@@ -959,19 +959,28 @@ END BusRoute_Package;
     COMMIT;
   END delete_Children;
 
-  PROCEDURE get_Children_by_id(
+PROCEDURE get_Children_by_id(
     get_ChildId IN Children.ChildId%TYPE
   ) IS
     c_get SYS_REFCURSOR;
   BEGIN
-    OPEN c_get FOR SELECT * FROM Children WHERE ChildId = get_ChildId;
+    OPEN c_get FOR SELECT c.*,b.busnumber,u.firstname||' '||u.lastname as parent FROM Children c  
+    inner join buses b
+    on c.busid= b.busid 
+    inner join user_ u
+    on c.parentid=u.userid
+    WHERE ChildId = get_ChildId;
     DBMS_SQL.RETURN_RESULT(c_get);
   END get_Children_by_id;
 
   PROCEDURE get_all_Children IS
     c_g_all SYS_REFCURSOR;
   BEGIN
-    OPEN c_g_all FOR SELECT * FROM Children;
+    OPEN c_g_all FOR SELECT c.*,b.busnumber,u.firstname||' '||u.lastname as parent FROM Children c  
+    inner join buses b
+    on c.busid= b.busid
+    inner join user_ u
+    on c.parentid=u.userid;
     DBMS_SQL.RETURN_RESULT(c_g_all);
   END get_all_Children;
 
