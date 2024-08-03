@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Sunday-July-28-2024   
+--  File created - Saturday-August-03-2024   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table ARRIVAL
@@ -149,38 +149,42 @@ REM INSERTING into ATTENDANCE
 SET DEFINE OFF;
 REM INSERTING into BUSES
 SET DEFINE OFF;
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (1,'B101',25,21,31);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (2,'B102',30,22,32);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (3,'B103',20,23,33);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (4,'B104',15,24,34);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (5,'B105',18,25,35);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (6,'B106',22,26,36);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (7,'B107',27,27,37);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (8,'B108',19,28,38);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (9,'B109',24,29,39);
-Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (10,'B110',16,null,null);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (1,'B101',25,6,37);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (2,'B102',30,9,34);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (3,'B103',20,26,24);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (4,'B104',15,29,7);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (5,'B105',18,36,37);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (6,'B106',23,39,32);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (7,'B107',27,6,27);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (8,'B108',19,9,24);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (9,'B109',25,9,34);
+Insert into BUSES (BUSID,BUSNUMBER,CHILDRENNUMBER,DRIVERID,TEACHERID) values (10,'B110',16,39,7);
 REM INSERTING into BUSLOCATION
 SET DEFINE OFF;
 REM INSERTING into BUSROUTE
 SET DEFINE OFF;
 REM INSERTING into CHILDREN
 SET DEFINE OFF;
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (63,'John','123 Main St, Springfield',1,1,'Doe');
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (64,'Jane','456 Elm St, Springfield',2,2,'Smith');
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (67,'Sarah','202 Pine St, Springfield',5,5,'Davis');
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (68,'David','303 Cedar St, Springfield',6,1,'Wilson');
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (69,'Laura','404 Birch St, Springfield',7,2,'Martinez');
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (70,'Kevin','505 Walnut St, Springfield',8,3,'Garcia');
-Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (71,'Amy','606 Poplar St, Springfield',9,4,'Clark');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (63,'John','123 Main St, Springfield',38,1,'Doe');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (64,'Jane','456 Elm St, Springfield',25,2,'Smith');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (67,'Sarah','202 Pine St, Springfield',25,5,'Davis');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (68,'David','303 Cedar St, Springfield',8,4,'Wilson');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (69,'Laura','404 Birch St, Springfield',8,2,'Martinez');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (70,'Kevin','505 Walnut St, Springfield',2,2,'Garcia');
+Insert into CHILDREN (CHILDID,FIRSTNAME,ADDRESS,PARENTID,BUSID,LASTNAME) values (71,'Amy','606 Poplar St, Springfield',33,4,'Clark');
 REM INSERTING into CONTACTUS
 SET DEFINE OFF;
+Insert into CONTACTUS (CONTACTUSID,"UserNAME",SUBJECT,"UserEMAIL",MESSAGE,CONTACTDATE) values (1,'John Doe','Inquiry about services','johndoe@example.com','I would like to know more about your services.',to_timestamp_tz('30-JUL-24 10.56.21.912000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'));
+Insert into CONTACTUS (CONTACTUSID,"UserNAME",SUBJECT,"UserEMAIL",MESSAGE,CONTACTDATE) values (2,'Jane Smith','Issue with account','janesmith@example.com','I am facing an issue with my account.',to_timestamp_tz('30-JUL-24 10.56.21.915000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'));
+Insert into CONTACTUS (CONTACTUSID,"UserNAME",SUBJECT,"UserEMAIL",MESSAGE,CONTACTDATE) values (3,'Alice Johnson','Feedback','alicej@example.com','I wanted to give feedback on your recent event.',to_timestamp_tz('30-JUL-24 10.56.21.915000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'));
+Insert into CONTACTUS (CONTACTUSID,"UserNAME",SUBJECT,"UserEMAIL",MESSAGE,CONTACTDATE) values (4,'Bob Brown','Support needed','bobb@example.com','I need support for my recent purchase.',to_timestamp_tz('30-JUL-24 10.56.21.915000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'));
+Insert into CONTACTUS (CONTACTUSID,"UserNAME",SUBJECT,"UserEMAIL",MESSAGE,CONTACTDATE) values (5,'Charlie Davis','Job application','charlied@example.com','I am interested in applying for a job.',to_timestamp_tz('30-JUL-24 10.56.21.915000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'));
+Insert into CONTACTUS (CONTACTUSID,"UserNAME",SUBJECT,"UserEMAIL",MESSAGE,CONTACTDATE) values (6,'Eve Martin','Partnership proposal','evem@example.com','I would like to discuss a partnership proposal.',to_timestamp_tz('30-JUL-24 10.56.21.915000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'));
 REM INSERTING into LOGIN
 SET DEFINE OFF;
 Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (3,'raaad@gmail.com','1234773',2001);
-Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (10,'jamala@gmail.com','1234773',2101);
 Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (1,'john.doe@example.com','password123',1);
 Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (2,'jane.smith@example.com','passw0rd',2);
-Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (4,'saifob@gmail.com','12345678',2002);
 Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (5,'sarah.davis@example.com','letmein',5);
 Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (6,'david.wilson@example.com','admin123',6);
 Insert into LOGIN (LOGINID,EMAIL,PASSWORD,USERID) values (7,'laura.martinez@example.com','password',7);
@@ -190,23 +194,22 @@ REM INSERTING into NOTIFICATIONS
 SET DEFINE OFF;
 REM INSERTING into PAGECONTENT
 SET DEFINE OFF;
+Insert into PAGECONTENT (PAGECONTENTID,PAGENAME,CONTENTKEY) values (1,'Home','Home Page Title');
+Insert into PAGECONTENT (PAGECONTENTID,PAGENAME,CONTENTKEY) values (2,'Home','Home Page Footer Title');
 REM INSERTING into ROLE
 SET DEFINE OFF;
 Insert into ROLE (ROLEID,ROLENAME) values (1,'Admin');
 Insert into ROLE (ROLEID,ROLENAME) values (2,'Teacher');
 Insert into ROLE (ROLEID,ROLENAME) values (3,'Parent');
-Insert into ROLE (ROLEID,ROLENAME) values (4,'Student');
-Insert into ROLE (ROLEID,ROLENAME) values (5,'Driver');
+Insert into ROLE (ROLEID,ROLENAME) values (4,'Driver');
 REM INSERTING into TESTIMONIAL
 SET DEFINE OFF;
+Insert into TESTIMONIAL (TESTIMONIALID,MESSAGE,PUBLISHER_ID,STATUS) values (1,'love',31,'Accept');
 REM INSERTING into USER_
 SET DEFINE OFF;
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2001,'mohd','07945745',5,to_timestamp_tz('27-JUL-24 07.34.36.969000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'aaaa','irbid','raaad','male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2101,'jamal','07945745',5,to_timestamp_tz('27-JUL-24 08.16.39.908000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'obeida','irbid','jamala','male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (1,'John','+1-234-567-890',1,to_timestamp_tz('19-JUL-24 06.55.32.491000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Doe','stri123 Main St, Springfieldng','johndoe','Male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2,'Jane','+1-234-567-891',2,to_timestamp_tz('19-JUL-24 06.55.32.496000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Smith','456 Elm St, Springfield','janesmith','Female');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (3,'ahmad','+1-234-567-899',5,to_timestamp_tz('26-JUL-24 03.53.22.420000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'obeidat','707 Cherry St, Springfield','ahmadobeidat','male');
-Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2002,'mohammad ','07842342342',5,to_timestamp_tz('27-JUL-24 07.38.13.321000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'obeidat','Naim Abdul Hadi St','saifob',null);
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2001,'mohd','07945745',3,to_timestamp_tz('27-JUL-24 07.34.36.969000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'aaaa','irbid','raaad','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (1,'John','+962557568426',1,to_timestamp_tz('19-JUL-24 06.55.32.491000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Doe','stri123 Main St, Springfieldng','johndoe','Female');
+Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (2,'Jane','+1-234-567-891',3,to_timestamp_tz('19-JUL-24 06.55.32.496000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Smith','456 Elm St, Springfield','janesmith','Female');
 Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (5,'Sarah','+1-234-567-894',3,to_timestamp_tz('19-JUL-24 06.55.32.514000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Davis','202 Pine St, Springfield','sarahd','Female');
 Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (6,'David','+1-234-567-895',4,to_timestamp_tz('19-JUL-24 06.55.32.520000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Wilson','303 Cedar St, Springfield','davidw','Male');
 Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,USERNAME,GENDER) values (7,'Laura','+1-234-567-896',2,to_timestamp_tz('19-JUL-24 06.55.32.525000000 PM +03:00','DD-MON-RR HH.MI.SSXFF AM TZR'),'Martinez','404 Birch St, Springfield','lauram','Female');
@@ -261,6 +264,7 @@ Insert into USER_ (USERID,FIRSTNAME,PHONE,ROLEID,"CreatedDate",LASTNAME,ADDRESS,
     );
 END Arrival_Status_Package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package ATTENDANCE_PACKAGE
@@ -293,6 +297,7 @@ END Arrival_Status_Package;
   PROCEDURE get_all_ATTENDANCE;
 
 END ATTENDANCE_package;
+
 
 /
 --------------------------------------------------------
@@ -327,6 +332,7 @@ END ATTENDANCE_package;
 
 END Buses_package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package BUSLOCATION_PACKAGE
@@ -357,6 +363,7 @@ END Buses_package;
   PROCEDURE Get_All_BusLocations;
 END BusLocation_Package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package BUSROUTE_PACKAGE
@@ -386,6 +393,7 @@ END BusLocation_Package;
 
   PROCEDURE Get_All_BusRoutes;
 END BusRoute_Package;
+
 
 
 /
@@ -423,6 +431,7 @@ END BusRoute_Package;
 
 END Children_package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package CONTACTUS_PACKAGE
@@ -433,8 +442,7 @@ END Children_package;
     c_UserNAME IN CONTACTUS."UserNAME"%TYPE,
     c_SUBJECT IN CONTACTUS."SUBJECT"%TYPE,
     c_UserEMAIL IN CONTACTUS."UserEMAIL"%TYPE,
-    c_MESSAGE IN CONTACTUS."MESSAGE"%TYPE,
-    c_CONTACTDATE IN CONTACTUS."CONTACTDATE"%TYPE
+    c_MESSAGE IN CONTACTUS."MESSAGE"%TYPE
   );
 
   PROCEDURE update_CONTACTUS(
@@ -458,7 +466,6 @@ END Children_package;
 
 END CONTACTUS_package;
 
-
 /
 --------------------------------------------------------
 --  DDL for Package LOGIN_PACKAGE
@@ -468,6 +475,7 @@ END CONTACTUS_package;
 as 
 procedure Login(E_mail in varchar2, Pass in varchar2);
 end Login_Package;
+
 
 /
 --------------------------------------------------------
@@ -500,6 +508,7 @@ end Login_Package;
 END PageContent_Package;
 
 
+
 /
 --------------------------------------------------------
 --  DDL for Package ROLE_PACKAGE
@@ -514,6 +523,7 @@ PROCEDURE GetAllRole;
 PROCEDURE GetRoleById(Role_Id in ROLE.roleid%type);
 END Role_Package;
 
+
 /
 --------------------------------------------------------
 --  DDL for Package SEARCH_CHILDREN_PACKAGE
@@ -524,6 +534,7 @@ END Role_Package;
         search_Name IN Children.firstname%type
     );
 END Search_Children_Package;
+
 
 /
 --------------------------------------------------------
@@ -555,6 +566,19 @@ END Search_Children_Package;
   PROCEDURE get_all_TESTIMONIAL;
 
 END TESTIMONIAL_package;
+
+
+/
+--------------------------------------------------------
+--  DDL for Package USER_STATISTICS_PACKAGE
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE PACKAGE "USER_STATISTICS_PACKAGE" 
+AS
+  PROCEDURE Get_Users_By_Year(p_year IN NUMBER);
+  PROCEDURE Get_Users_By_Month_And_Year(p_year IN NUMBER, p_month IN NUMBER);
+
+END USER_STATISTICS_PACKAGE;
 
 /
 --------------------------------------------------------
@@ -598,6 +622,7 @@ END TESTIMONIAL_package;
   PROCEDURE get_all_user_;
 
 END user__package;
+
 
 /
 --------------------------------------------------------
@@ -737,8 +762,8 @@ END ATTENDANCE_package;
     c_TEACHERID IN Buses.TEACHERID%Type
   ) IS
   BEGIN
-    INSERT INTO Buses (BusNumber, ChildrenNumber, DriverId)
-    VALUES (c_BusNumber, c_ChildrenNumber, c_DriverId);
+    INSERT INTO Buses (BusNumber, ChildrenNumber, DriverId,TEACHERID)
+    VALUES (c_BusNumber, c_ChildrenNumber, c_DriverId,c_TEACHERID);
     COMMIT;
   END create_Buses;
 
@@ -991,12 +1016,11 @@ END Children_package;
     c_UserNAME IN CONTACTUS."UserNAME"%TYPE,
     c_SUBJECT IN CONTACTUS."SUBJECT"%TYPE,
     c_UserEMAIL IN CONTACTUS."UserEMAIL"%TYPE,
-    c_MESSAGE IN CONTACTUS."MESSAGE"%TYPE,
-    c_CONTACTDATE IN CONTACTUS."CONTACTDATE"%TYPE
+    c_MESSAGE IN CONTACTUS."MESSAGE"%TYPE
   ) IS
   BEGIN
-    INSERT INTO CONTACTUS ("UserNAME", "SUBJECT", "UserEMAIL", "MESSAGE", "CONTACTDATE")
-    VALUES (c_UserNAME, c_SUBJECT, c_UserEMAIL, c_MESSAGE, c_CONTACTDATE);
+    INSERT INTO CONTACTUS ("UserNAME", "SUBJECT", "UserEMAIL", "MESSAGE")
+    VALUES (c_UserNAME, c_SUBJECT, c_UserEMAIL, c_MESSAGE);
     COMMIT;
   END create_CONTACTUS;
 
@@ -1044,7 +1068,6 @@ END Children_package;
   END get_all_CONTACTUS;
 
 END CONTACTUS_package;
-
 
 /
 --------------------------------------------------------
@@ -1250,11 +1273,49 @@ END Search_Children_Package;
   PROCEDURE get_all_TESTIMONIAL IS
     c_g_all SYS_REFCURSOR;
   BEGIN
-    OPEN c_g_all FOR SELECT T.* , u.FIRSTNAME || ' ' || u.LASTNAME as Full_Name  FROM TESTIMONIAL T inner join user_ u on T.PUBLISHER_ID = u.USERID;
+    OPEN c_g_all FOR 
+    SELECT T.* , u.FIRSTNAME || ' ' || u.LASTNAME as Full_Name  
+    FROM TESTIMONIAL T 
+    inner join user_ u 
+    on T.PUBLISHER_ID = u.USERID;
     DBMS_SQL.RETURN_RESULT(c_g_all);
   END get_all_TESTIMONIAL;
 
 END TESTIMONIAL_package;
+
+/
+--------------------------------------------------------
+--  DDL for Package Body USER_STATISTICS_PACKAGE
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE PACKAGE BODY "USER_STATISTICS_PACKAGE" 
+AS
+  PROCEDURE Get_Users_By_Year(p_year IN NUMBER)
+  AS
+    userCur SYS_REFCURSOR;
+  BEGIN
+    OPEN userCur FOR 
+    SELECT * FROM USER_
+    WHERE EXTRACT(YEAR FROM "CreatedDate") = p_year
+    ORDER BY "CreatedDate";
+    DBMS_SQL.RETURN_RESULT(userCur);
+  END Get_Users_By_Year;
+
+  PROCEDURE Get_Users_By_Month_And_Year(p_year IN NUMBER, p_month IN NUMBER)
+  AS
+    userCur SYS_REFCURSOR;
+  BEGIN
+    OPEN userCur FOR 
+    SELECT * FROM USER_
+    WHERE EXTRACT(YEAR FROM "CreatedDate") = p_year
+    AND EXTRACT(MONTH FROM "CreatedDate") = p_month
+    ORDER BY "CreatedDate";
+    DBMS_SQL.RETURN_RESULT(userCur);
+  END Get_Users_By_Month_And_Year;
+
+
+
+END USER_STATISTICS_PACKAGE;
 
 /
 --------------------------------------------------------
@@ -1343,10 +1404,10 @@ END user__package;
 --  Constraints for Table ATTENDANCE
 --------------------------------------------------------
 
+  ALTER TABLE "ATTENDANCE" MODIFY ("ATTENDANCEID" NOT NULL ENABLE);
   ALTER TABLE "ATTENDANCE" ADD PRIMARY KEY ("ATTENDANCEID")
   USING INDEX  ENABLE;
   ALTER TABLE "ATTENDANCE" MODIFY ("STATUS" NOT NULL ENABLE);
-  ALTER TABLE "ATTENDANCE" MODIFY ("ATTENDANCEID" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table USER_
 --------------------------------------------------------
